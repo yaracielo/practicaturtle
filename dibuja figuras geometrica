@@ -1,0 +1,105 @@
+import turtle
+
+# Configuración de pantalla
+pantalla = turtle.Screen()
+pantalla.bgcolor("white")
+t = turtle.Turtle()
+t.speed(0)
+
+# Función para mover sin dibujar
+def mover(x, y):
+    t.penup()
+    t.goto(x, y)
+    t.pendown()
+
+# 1. Triángulo azul
+t.color("blue", "blue")
+mover(-250, 150)
+t.begin_fill()
+for _ in range(3):
+    t.forward(60)
+    t.left(120)
+t.end_fill()
+
+# 2. Cuadrado rojo
+t.color("red", "red")
+mover(-150, 150)
+t.begin_fill()
+for _ in range(4):
+    t.forward(60)
+    t.left(90)
+t.end_fill()
+
+# 3. Rectángulo amarillo
+t.color("yellow", "yellow")
+mover(-50, 150)
+t.begin_fill()
+for _ in range(2):
+    t.forward(80)
+    t.left(90)
+    t.forward(50)
+    t.left(90)
+t.end_fill()
+
+# 4. Círculo verde
+t.color("green", "green")
+mover(100, 150)
+t.begin_fill()
+t.circle(30)
+t.end_fill()
+
+# 5. Rombo amarillo
+t.color("yellow", "yellow")
+mover(-250, 20)
+t.begin_fill()
+t.setheading(45)
+for _ in range(2):
+    t.forward(60)
+    t.left(90)
+    t.forward(60)
+    t.left(90)
+t.end_fill()
+
+# 6. Paralelogramo azul
+t.color("deepskyblue", "deepskyblue")
+mover(-150, 20)
+t.setheading(0)
+t.begin_fill()
+t.forward(70)
+t.left(60)
+t.forward(50)
+t.left(120)
+t.forward(70)
+t.left(60)
+t.forward(50)
+t.end_fill()
+
+# 7. Trapecio verde
+t.color("lightgreen", "lightgreen")
+mover(-30, 20)
+t.setheading(0)
+t.begin_fill()
+t.forward(80)
+t.left(120)
+t.forward(40)
+t.left(60)
+t.forward(50)
+t.left(60)
+t.forward(40)
+t.left(120)
+t.end_fill()
+
+# 8. Óvalo rojo (usando semicírculos)
+t.color("red", "red")
+mover(100, 20)
+t.setheading(0)
+t.begin_fill()
+t.forward(40)
+t.circle(30, 180)
+t.forward(40)
+t.circle(30, 180)
+t.end_fill()
+
+# Fin
+t.hideturtle()
+pantalla.exitonclick()
