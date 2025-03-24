@@ -1,0 +1,16 @@
+import turtle
+
+# Configuración de la tortuga
+t = turtle.Turtle()
+t.speed(3)
+
+# Dibujar un triángulo isósceles
+t.forward(100)   # Base del triángulo
+t.left(120)      
+t.forward(100)   # Lado igual
+t.left(120)
+t.forward(100)   # Lado igual
+t.left(120)
+
+# Finalizar
+turtle.done()
