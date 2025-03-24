@@ -1,0 +1,28 @@
+import turtle
+
+# Configuración inicial
+t = turtle.Turtle()
+t.pensize(5)
+t.speed(7)
+
+def flecha(color, x, y, direccion):
+    t.penup()
+    t.goto(x, y)
+    t.setheading(direccion)
+    t.pendown()
+    t.color(color)
+    t.forward(50)
+    t.right(150)
+    t.forward(15)
+    t.back(15)
+    t.left(300)
+    t.forward(15)
+    t.hideturtle()
+
+# Dibujar flechas (posiciones aproximadas según imagen)
+flecha("blue", -50, 30, 270)   # Flecha hacia abajo
+flecha("red", -20, -45, 0)      # Flecha hacia la derecha
+flecha("orange", 40, -20, 90)   # Flecha hacia arriba
+flecha("green", 15, 50, 180)   # Flecha hacia la izquierda
+
+turtle.done()
