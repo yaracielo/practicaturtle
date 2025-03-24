@@ -1,0 +1,23 @@
+import turtle
+import math
+
+# Entrada de datos
+centro = input("Ingrese las coordenadas del centro del circulo (ejemplo 00): ")
+x = int(centro[0])
+y = int(centro[1])
+radio = int(input("Ingrese el radio del circulo: "))
+
+# Cálculo del área
+area = math.pi * radio * radio
+
+# Dibujar el círculo
+t = turtle.Turtle()
+t.penup()
+t.goto(x, y - radio)  # Ajustamos porque turtle dibuja el círculo desde el borde
+t.pendown()
+t.circle(radio)
+
+# Mostrar el área en consola
+print("El área del círculo es:", round(area, 2))
+
+turtle.done()
