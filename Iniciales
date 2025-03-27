@@ -1,0 +1,29 @@
+import turtle
+
+# Configuración de la pantalla
+v = turtle.Screen()
+v.bgcolor("yellow")
+
+# Configuración de la tortuga
+t = turtle.Turtle()
+t.color("red")
+t.pensize(10)
+
+# Dibujar la letra C
+t.penup()
+t.goto(-100, 50)  # Posición inicial
+t.pendown()
+t.circle(50, -200)  # Se ajusta el ángulo para hacer una "C" más abierta
+
+# Dibujar la letra G
+t.penup()
+t.goto(80, 50)  # Posición inicial de la G
+t.pendown()
+t.circle(50, -270)  # Círculo incompleto
+t.penup()
+t.goto(110, -10)  # Posicionar para la línea horizontal de la "G"
+t.pendown()
+t.forward(25)  # Línea extra para cerrar la "G"
+
+# Evitar que la ventana se cierre automáticamente en Trinket
+turtle.done()
