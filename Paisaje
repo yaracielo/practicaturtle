@@ -1,0 +1,245 @@
+import turtle
+
+# Configuración inicial
+turtle.speed(0)
+turtle.bgcolor("skyblue")  # "azul cielo" en inglés
+
+# Función para dibujar un rectángulo relleno
+def rectángulo(x, y, ancho, alto, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for _ in range(2):
+        turtle.forward(ancho)
+        turtle.right(90)
+        turtle.forward(alto)
+        turtle.right(90)
+    turtle.end_fill()
+
+# Función para dibujar un triángulo relleno
+def triángulo(x, y, tamaño, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for _ in range(3):
+        turtle.forward(tamaño)
+        turtle.left(120)
+    turtle.end_fill()
+
+# Dibujar el césped
+rectángulo(-400, -100, 800, 400, "limegreen")
+
+# Dibujar montañas
+triángulo(-400, -100, 300, "dimgray")  # Izquierda
+triángulo(100, -100, 300, "dimgray")   # Derecha
+triángulo(-160, -100, 400, "gray")     # Media
+
+# Capa de hielo en la montaña media
+turtle.penup()
+turtle.goto(-35, 120)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.left(35)
+turtle.forward(60)
+turtle.right(90)
+turtle.forward(30)
+turtle.left(100)
+turtle.forward(45)
+turtle.right(85)
+turtle.forward(65)
+turtle.left(160)
+turtle.forward(150)
+turtle.end_fill()
+
+# Capa de hielo en la montaña izquierda
+turtle.penup()
+turtle.goto(-215, 100)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.forward(70)
+turtle.left(120)
+turtle.forward(75)
+turtle.left(150)
+turtle.forward(45)
+turtle.right(90)
+turtle.forward(45)
+turtle.left(120)
+turtle.end_fill()
+
+# Capa de hielo en la montaña derecha
+turtle.penup()
+turtle.goto(203, 80)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.forward(95)
+turtle.right(120)
+turtle.forward(80)
+turtle.right(150)
+turtle.forward(50)
+turtle.left(70)
+turtle.end_fill()
+
+# Dibujar el sol
+turtle.penup()
+turtle.goto(-500, 350)
+turtle.pendown()
+turtle.fillcolor("yellow")
+turtle.begin_fill()
+turtle.circle(125)
+turtle.end_fill()
+
+# Función para dibujar un árbol
+def árbol(x, y):
+    # Tronco
+    rectángulo(x, y, 40, 10, "saddlebrown")
+
+    # Hojas
+    turtle.penup()
+    turtle.goto(x + 20, y + 5)
+    turtle.pendown()
+    turtle.fillcolor("forestgreen")
+    turtle.begin_fill()
+    turtle.circle(25)
+    turtle.end_fill()
+
+# Dibujar árboles
+árbol(-25, -200)
+árbol(200, -150)
+árbol(300, -250)
+árbol(-300, -250)
+árbol(-200, -100)
+
+# Ocultar la tortuga
+turtle.hideturtle()
+
+# Mantener la ventana abierta
+turtle.done()import turtle
+
+# Configuración inicial
+turtle.speed(0)
+turtle.bgcolor("skyblue")  # "azul cielo" en inglés
+
+# Función para dibujar un rectángulo relleno
+def rectángulo(x, y, ancho, alto, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for _ in range(2):
+        turtle.forward(ancho)
+        turtle.right(90)
+        turtle.forward(alto)
+        turtle.right(90)
+    turtle.end_fill()
+
+# Función para dibujar un triángulo relleno
+def triángulo(x, y, tamaño, color):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.fillcolor(color)
+    turtle.begin_fill()
+    for _ in range(3):
+        turtle.forward(tamaño)
+        turtle.left(120)
+    turtle.end_fill()
+
+# Dibujar el césped
+rectángulo(-400, -100, 800, 400, "limegreen")
+
+# Dibujar montañas
+triángulo(-400, -100, 300, "dimgray")  # Izquierda
+triángulo(100, -100, 300, "dimgray")   # Derecha
+triángulo(-160, -100, 400, "gray")     # Media
+
+# Capa de hielo en la montaña media
+turtle.penup()
+turtle.goto(-35, 120)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.left(35)
+turtle.forward(60)
+turtle.right(90)
+turtle.forward(30)
+turtle.left(100)
+turtle.forward(45)
+turtle.right(85)
+turtle.forward(65)
+turtle.left(160)
+turtle.forward(150)
+turtle.end_fill()
+
+# Capa de hielo en la montaña izquierda
+turtle.penup()
+turtle.goto(-215, 100)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.forward(70)
+turtle.left(120)
+turtle.forward(75)
+turtle.left(150)
+turtle.forward(45)
+turtle.right(90)
+turtle.forward(45)
+turtle.left(120)
+turtle.end_fill()
+
+# Capa de hielo en la montaña derecha
+turtle.penup()
+turtle.goto(203, 80)
+turtle.pendown()
+turtle.fillcolor("white")
+turtle.begin_fill()
+turtle.forward(95)
+turtle.right(120)
+turtle.forward(80)
+turtle.right(150)
+turtle.forward(50)
+turtle.left(70)
+turtle.end_fill()
+
+# Dibujar el sol
+turtle.penup()
+turtle.goto(-500, 350)
+turtle.pendown()
+turtle.fillcolor("yellow")
+turtle.begin_fill()
+turtle.circle(125)
+turtle.end_fill()
+
+# Función para dibujar un árbol
+def árbol(x, y):
+    # Tronco
+    rectángulo(x, y, 40, 10, "saddlebrown")
+
+    # Hojas
+    turtle.penup()
+    turtle.goto(x + 20, y + 5)
+    turtle.pendown()
+    turtle.fillcolor("forestgreen")
+    turtle.begin_fill()
+    turtle.circle(25)
+    turtle.end_fill()
+
+# Dibujar árboles
+árbol(-25, -200)
+árbol(200, -150)
+árbol(300, -250)
+árbol(-300, -250)
+árbol(-200, -100)
+
+# Ocultar la tortuga
+turtle.hideturtle()
+
+# Mantener la ventana abierta
+turtle.done()
